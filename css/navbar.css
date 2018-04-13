@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.flex-container {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  background-color: #40B3A2;
+}
+
+.flex-list {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  
+}
+.home, .about, .careers, .flex-help, .navbar-menu-small{
+	padding: 20px;
+	border-radius: 2%;
+	cursor: pointer;
+}
+.home:hover, .about:hover, .careers:hover, .flex-help:hover, .navbar-menu-small:hover{
+	padding: 20px;
+	border-radius: 2%;
+	background-color: #fff;
+	color: #40B3A2;
+}
+.minimizedline{
+	cursor: pointer;
+	border-radius: 5%;
+	padding: 15px;
+	display: none;
+}
+.container{
+	padding-top: 2%;
+	width: 90%;
+	margin: auto;
+	text-align: justify;
+}
+@media only screen and (min-width: 769px) {
+	.home:hover, .about:hover, .careers:hover, .flex-help:hover, .navbar-menu-small:hover{
+		transform: scale(1.2);
+	}
+	.flex-container {
+	  color: #fff;
+	  display: flex;
+	  justify-content: center;
+	  background-color: #40B3A2;  /* Blue */
+	}
+	.flex-list {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+	}
+	.home, .about, .careers, .flex-help{
+		padding: 20px;
+		border-radius: 2%;
+		cursor: pointer;
+		display: inline-flex !important;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.flex-container {
+	  color: #fff;
+	  display: flex;
+	  justify-content: flex-start;
+	  background-color: #40B3A2;  /* Blue */
+	}
+	.flex-list {
+		flex-wrap: wrap;
+		width: 100%;
+  		display: flex;
+  		justify-content: center;
+  		flex-direction: column;
+	}
+	.home, .about, .careers, .flex-help{
+		display: none;
+	}
+	.minimizedline, .navbar-menu-small{
+		justify-content: flex-end;
+		display: block;
+		align-items: flex-end;
+	}
+	.minimizedline{
+		margin-left: auto;
+	}
+}
